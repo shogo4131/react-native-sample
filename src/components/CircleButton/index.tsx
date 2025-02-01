@@ -1,13 +1,14 @@
 import type { ReactNode } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, type ViewStyle } from "react-native";
 
 type Props = {
   children: ReactNode;
+  style?: ViewStyle;
 };
 
-export const CircleButton = ({ children }: Props) => {
+export const CircleButton = ({ children, style }: Props) => {
   return (
-    <View style={styles.addButton}>
+    <View style={[styles.addButton, style]}>
       <Text style={styles.addButtonText}>{children}</Text>
     </View>
   );
