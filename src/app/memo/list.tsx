@@ -2,6 +2,7 @@ import { StyleSheet, View } from "react-native";
 import { CircleButton } from "../../components/CircleButton";
 import { Header } from "../../components/Header";
 import { List } from "../../components/List";
+import { Feather } from "@expo/vector-icons";
 
 export default function MemoList() {
   return (
@@ -10,7 +11,9 @@ export default function MemoList() {
       <List />
       <List />
       <List />
-      <CircleButton>+</CircleButton>
+      <CircleButton>
+        <Feather name="plus" size={24} color="white" />
+      </CircleButton>
     </View>
   );
 }
