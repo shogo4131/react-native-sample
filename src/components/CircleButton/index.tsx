@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import {
   StyleSheet,
   Text,
-  View,
   type ViewStyle,
   TouchableOpacity,
 } from "react-native";
@@ -10,11 +9,12 @@ import {
 type Props = {
   children: ReactNode;
   style?: ViewStyle;
+  onPress?: () => void;
 };
 
-export const CircleButton = ({ children, style }: Props) => {
+export const CircleButton = ({ children, style, onPress }: Props) => {
   return (
-    <TouchableOpacity style={[styles.addButton, style]}>
+    <TouchableOpacity onPress={onPress} style={[styles.addButton, style]}>
       <Text style={styles.addButtonText}>{children}</Text>
     </TouchableOpacity>
   );
