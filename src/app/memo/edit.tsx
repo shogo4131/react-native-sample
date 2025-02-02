@@ -7,15 +7,22 @@ import {
 import { Header } from "../../components/Header";
 import { CircleButton } from "../../components/CircleButton";
 import { Feather } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 export default function EditMemo() {
+  const router = useRouter();
+
+  const onPress = () => {
+    router.push("/memo/list");
+  };
+
   return (
     <KeyboardAvoidingView behavior="height" style={styles.container}>
       <Header />
       <View style={styles.inputContainer}>
         <TextInput multiline style={styles.input} value="買い物リスト" />
       </View>
-      <CircleButton>
+      <CircleButton onPress={onPress}>
         <Feather name="check" size={24} color="white" />
       </CircleButton>
     </KeyboardAvoidingView>

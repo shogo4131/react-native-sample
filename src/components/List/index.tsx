@@ -1,19 +1,22 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
+import { Link } from "expo-router";
 
 export const List = () => {
   return (
-    <View>
-      <View style={styles.list}>
-        <View>
-          <Text style={styles.listTitle}>買い物リスト</Text>
-          <Text style={styles.listDate}>2023年1月1日 1:00</Text>
+    <Link href="/memo/detail" asChild>
+      <TouchableOpacity>
+        <View style={styles.list}>
+          <View>
+            <Text style={styles.listTitle}>買い物リスト</Text>
+            <Text style={styles.listDate}>2023年1月1日 1:00</Text>
+          </View>
+          <TouchableOpacity>
+            <Feather name="trash-2" size={24} color="black" />
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity>
-          <Feather name="trash-2" size={24} color="black" />
-        </TouchableOpacity>
-      </View>
-    </View>
+      </TouchableOpacity>
+    </Link>
   );
 };
 

@@ -5,9 +5,16 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import { Link, useRouter } from "expo-router";
 import { Header } from "../../components/Header";
 
 export default function Signup() {
+  const router = useRouter();
+
+  const onPress = () => {
+    router.push("/memo/list");
+  };
+
   return (
     <View style={styles.container}>
       <Header />
@@ -15,14 +22,16 @@ export default function Signup() {
         <Text style={styles.title}>新規登録</Text>
         <TextInput style={styles.input} value="email" />
         <TextInput style={styles.input} value="password" />
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={onPress}>
           <Text style={styles.buttonText}>submit</Text>
         </TouchableOpacity>
         <View style={styles.footer}>
           <Text style={styles.footerText}>Already registered?</Text>
-          <TouchableOpacity>
-            <Text style={styles.footerLink}>Login</Text>
-          </TouchableOpacity>
+          <Link href="/auth/login" asChild>
+            <TouchableOpacity>
+              <Text style={styles.footerLink}>Login</Text>
+            </TouchableOpacity>
+          </Link>
         </View>
       </View>
     </View>
