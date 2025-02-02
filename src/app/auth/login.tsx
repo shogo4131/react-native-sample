@@ -1,4 +1,10 @@
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import { Header } from "../../components/Header";
 
 export default function Login() {
@@ -9,12 +15,14 @@ export default function Login() {
         <Text style={styles.title}>ログイン</Text>
         <TextInput style={styles.input} value="email" />
         <TextInput style={styles.input} value="password" />
-        <View style={styles.button}>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>submit</Text>
-        </View>
+        </TouchableOpacity>
         <View style={styles.footer}>
           <Text style={styles.footerText}>Not registered?</Text>
-          <Text style={styles.footerLink}>Sign up</Text>
+          <TouchableOpacity>
+            <Text style={styles.footerLink}>Sign up</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>

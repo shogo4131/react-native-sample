@@ -1,4 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { Feather } from "@expo/vector-icons";
 
 export const List = () => {
   return (
@@ -8,9 +9,9 @@ export const List = () => {
           <Text style={styles.listTitle}>買い物リスト</Text>
           <Text style={styles.listDate}>2023年1月1日 1:00</Text>
         </View>
-        <View>
-          <Text>×</Text>
-        </View>
+        <TouchableOpacity>
+          <Feather name="trash-2" size={24} color="black" />
+        </TouchableOpacity>
       </View>
     </View>
   );
