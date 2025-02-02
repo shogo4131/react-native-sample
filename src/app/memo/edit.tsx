@@ -4,7 +4,6 @@ import {
   TextInput,
   KeyboardAvoidingView,
 } from "react-native";
-import { Header } from "../../components/Header";
 import { CircleButton } from "../../components/CircleButton";
 import { Feather } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
@@ -18,7 +17,6 @@ export default function EditMemo() {
 
   return (
     <KeyboardAvoidingView behavior="height" style={styles.container}>
-      <Header />
       <View style={styles.inputContainer}>
         <TextInput multiline style={styles.input} value="買い物リスト" />
       </View>

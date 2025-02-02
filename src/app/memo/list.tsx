@@ -1,9 +1,8 @@
 import { StyleSheet, View } from "react-native";
 import { CircleButton } from "../../components/CircleButton";
-import { Header } from "../../components/Header";
 import { List } from "../../components/List";
 import { Feather } from "@expo/vector-icons";
-import { useRouter } from "expo-router";
+import { useRouter, useNavigation } from "expo-router";
 
 export default function MemoList() {
   const router = useRouter();
@@ -14,7 +13,6 @@ export default function MemoList() {
 
   return (
     <View style={styles.container}>
-      <Header />
       <List />
       <List />
       <List />

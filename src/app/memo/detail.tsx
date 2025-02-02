@@ -1,5 +1,4 @@
 import { View, Text, ScrollView, StyleSheet } from "react-native";
-import { Header } from "../../components/Header";
 import { CircleButton } from "../../components/CircleButton";
 import { Feather } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
@@ -13,7 +12,6 @@ export default function MemoDetail() {
 
   return (
     <View style={styles.container}>
-      <Header />
       <View style={styles.memoHeader}>
         <Text style={styles.memoTitle}>買い物リスト</Text>
         <Text style={styles.memoDate}>2025-01-01</Text>
